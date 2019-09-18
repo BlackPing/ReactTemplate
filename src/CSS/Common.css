@@ -1,0 +1,3 @@
+html, body, header { margin: 0px; padding: 0px;}
+input, button, a { all: unset; }
+a { cursor: pointer; }
