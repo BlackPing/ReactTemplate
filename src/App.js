@@ -5,6 +5,7 @@ import Root from './GlobalValue';
 import RouteList from './Router';
 Root.test = "String";
 
+
 const Home = loadable(() => import('./AppComponent/Home'));
 const App = () => {
     return (
