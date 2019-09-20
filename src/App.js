@@ -5,9 +5,11 @@ import Root from './GlobalValue';
 import RouteList from './Router';
 Root.test = "String";
 
+import { createStore } from 'redux';
+import { sessionService, sessionReducer } from 'redux-react-session';
 
 const Home = loadable(() => import('./AppComponent/Home'));
-const App = () => {
+function App() {
     return (
         <>
             <Router>

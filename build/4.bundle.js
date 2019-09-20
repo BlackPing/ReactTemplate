@@ -1,1 +1,1 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[4],{358:function(n,o){var a=new SockJS("/echo1");a.onmessage=function(n){var o=n.data;$("#data").append(o+"<br/>")},a.onclose=function(n){$("#data").append("연결 끊김")},console.log("켜짐 ㅇㅇ")}}]);
+(window.webpackJsonp=window.webpackJsonp||[]).push([[4],{414:function(e,n,t){"use strict";t.r(n);var a=t(1),l=t.n(a);n.default=function(){return l.a.createElement(l.a.Fragment,null,l.a.createElement("div",null,l.a.createElement("p",null,"Component Get")))}}}]);

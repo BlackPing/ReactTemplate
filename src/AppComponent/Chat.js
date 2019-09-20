@@ -1,20 +1,40 @@
 import React, { useEffect, useState } from "react";
 import SockJS from 'sockjs-client'
+import Root from '../GlobalValue';
 
 const Socket = new SockJS("http://127.0.0.1:8080/echo1");
 
-var test = 1234;
 
-const Chat = () => {
-    // handleData(data) {
-    //     let result = JSON.parse(data);
-    //     this.setState({count: this.state.count + result.movement});
-    //   }
-    const [count, setCount] = useState("");
+const ClickE = () => {
+    import("../Function/Common").then(func => {
+        func.getdata("post", "/session", {}).then((result) => {
+            console.log(result);
+        })
+    });
+}
+
+const Talk = (props) => {
+    return (
+        <>
+            {props.name}
+        </>
+    );
+}
+
+function Chat(props) {
+    
+    const [count, setCount] = useState("1234");
+    const ClickT = () => {
+
+        setCount("2222");
+    }
     return (
         <>
             <div>Chatting</div>
-
+            <Talk name="tttt" />
+            {count}
+            <button onClick={ClickE}>ClickMe</button>
+            <button onClick={ClickT}>ClickTwo</button>
         </>
     );
 }
