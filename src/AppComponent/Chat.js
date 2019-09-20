@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import SockJS from 'sockjs-client'
-import Root from '../GlobalValue';
 
 const Socket = new SockJS("http://127.0.0.1:8080/echo1");
 

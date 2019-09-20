@@ -82,5 +82,3 @@ Front Server에서 Back Server Spring WebSocket 소켓 서버 연결 테스트
 
 ### Arrow Function this bind Test
 람다식 함수 this 키워드 bind 테스트
-
-### React Redux Gloval Value management

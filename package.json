@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "webpack --mode development",
     "build": "webpack --mode production",
-    "start": "webpack-dev-server --mode development --open --host 127.0.0.1 --port 3000",
+    "start": "npm run build && webpack-dev-server --mode development --open --host 127.0.0.1 --port 3000",
     "server": "npm run build && node ./Server/Server.js"
   },
   "keywords": [],

@@ -1,9 +1,6 @@
 import React, { useEffect, useState } from "react"; // React Import
 import { Link, Route, Switch, BrowserRouter as Router } from "react-router-dom"; // React Router Import
 import loadable from '@loadable/component' // Code Splitting Import
-import Root from './GlobalValue'; // GlobalValue
-
-Root.test = "String"; // GlobalValue Controll
 
 const Com1 = loadable(() => import('./Component/One')); // Code Splitting
 const Com2 = loadable(() => import('./Component/Two'));
