@@ -82,3 +82,14 @@ Front Server에서 Back Server Spring WebSocket 소켓 서버 연결 테스트
 
 ### Arrow Function this bind Test
 람다식 함수 this 키워드 bind 테스트
+
+## Develoment - 2019-09-22
+### Proxy
+npm install --save http-proxy
+프록시 서버 설정 및 아파치 연동 테스트
+
+### window.sessionStore test
+세션 스토리지 테스트
+
+### Socket send receive
+소켓 보내기 받기 구현

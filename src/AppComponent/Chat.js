@@ -1,15 +1,18 @@
 import React, { useEffect, useState } from "react";
 import SockJS from 'sockjs-client'
 
-const Socket = new SockJS("http://127.0.0.1:8080/echo1");
+const Socket = new SockJS("http://127.0.0.1:8080/echo1?userId=yomile");
+Socket.onopen = function() {
+    console.log("open");
+    Socket.send("이거나 먹어라");
+}
 
+Socket.onmessage = function(msg) {
+    console.log(msg.data);
+}
 
 const ClickE = () => {
-    import("../Function/Common").then(func => {
-        func.getdata("post", "/session", {}).then((result) => {
-            console.log(result);
-        })
-    });
+    Socket.send("야스");
 }
 
 const Talk = (props) => {
@@ -24,7 +27,9 @@ function Chat(props) {
     
     const [count, setCount] = useState("1234");
     const ClickT = () => {
-
+        console.log("session ON");
+        window.sessionStorage.setItem("Man",  JSON.stringify({name: "test"}));
+        console.log(JSON.parse(window.sessionStorage.getItem("Man")));
         setCount("2222");
     }
     return (

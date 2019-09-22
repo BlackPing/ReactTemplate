@@ -34,7 +34,3 @@ React Router
 npm install --save react-router-dom
 
 npm install --save @loadable/component
-
-npm install --save redux-react-session
-
-npm install --save react-redux

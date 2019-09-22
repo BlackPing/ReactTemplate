@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[5],{442:function(e,n,t){"use strict";t.r(n);var a=t(1),l=t.n(a);n.default=function(){return l.a.createElement(l.a.Fragment,null,l.a.createElement("div",null,l.a.createElement("p",null,"Component Get")))}}}]);
