@@ -5,7 +5,7 @@ const httpProxy = require('http-proxy');
 
 const app = express();
 
-httpProxy.createProxyServer({target:'http://localhost:2000'}).listen(8000);
+httpProxy.createProxyServer({target:'http://localhost:2001'}).listen(2000);
 
 app.use(express.static(path.join(__dirname, "../build")));
 
@@ -24,7 +24,7 @@ app.get('*', function (req, res){
 })
 
 
-app.listen(2000, "127.0.0.1", () => {
+app.listen(2001, "127.0.0.1", () => {
     console.log("Server On");
     console.log(Routes);
 })

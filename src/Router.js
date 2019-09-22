@@ -4,5 +4,5 @@ const Chat = loadable(() => import('./AppComponent/Chat'));
 
 export default [
     {path: "/home", component: Com1, name: "Home"},
-    {path: "/chatting", component: Chat, name: "Chat"}
+    {path: "/chatting", component: Chat, name: "Chat"},
 ]

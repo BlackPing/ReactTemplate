@@ -1,6 +1,6 @@
 app = {
     routes: [
-        "home", "chatting"
+        "home", "chatting", "login"
     ]
 }
 
