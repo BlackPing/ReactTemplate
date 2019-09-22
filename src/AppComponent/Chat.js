@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import SockJS from 'sockjs-client'
 
-const Socket = new SockJS("http://127.0.0.1:8080/echo1?userId=yomile");
+const Socket = new SockJS("http://112.154.178.73:8080/echo1?userId=yomile");
 Socket.onopen = function() {
     console.log("open");
     Socket.send("이거나 먹어라");
@@ -12,7 +12,13 @@ Socket.onmessage = function(msg) {
 }
 
 const ClickE = () => {
-    Socket.send("야스");
+    console.log("trst");
+    import("../Function/Common").then(func => { // Code Spliting Function JS File
+        func.getdata("get", "/test", {}).then((result) => { // async axios data request respons
+            console.log(result);
+        })
+    });
+    // Socket.send("야스");
 }
 
 const Talk = (props) => {
