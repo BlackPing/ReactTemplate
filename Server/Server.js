@@ -1,11 +1,11 @@
 const express = require('express');
 const path = require('path');
 const Routes = require('./route');
+const httpProxy = require('http-proxy');
 
 const app = express();
 
-const router = express.Router();
-
+httpProxy.createProxyServer({target:'http://localhost:2000'}).listen(8000);
 
 app.use(express.static(path.join(__dirname, "../build")));
 
